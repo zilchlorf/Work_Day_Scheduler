@@ -14,3 +14,4 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+![image](https://user-images.githubusercontent.com/63215148/83719891-e620de00-a5ec-11ea-9594-87b223373646.png)
