@@ -20,7 +20,7 @@
         <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-
+        <!-- //timeblocks for business hours -->
         <div id="hour-9" class="row time-block">
             <div class="col-md-1 hour"> 9AM
             </div>
@@ -92,8 +92,6 @@
             localStorage.setItem(time, value);
         });
 
-
-
         function hourUpdater() {
             //get current hour
             var currentHour = moment().hours();
@@ -114,20 +112,14 @@
                     $(this).addClass("future");
 
                 };
-
-
             });
+            //loop through each hour and get text from local storage
             for (var i = 9; i < 18; i++) {
                 $(`#hour-${i} .description`).val(localStorage.getItem(`hour-${i}`));
+
             }
         }
         hourUpdater();
-
-        // $("#hour-9 .description").val(localStorage.getItem("hour-9"));
-
-            // var interval = setInterval(hourUpdater, 15000);
-            // console.log(interval);
-
     </script>
 </body>
 
